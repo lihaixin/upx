@@ -19,6 +19,6 @@ FROM --platform=${TARGETPLATFORM} alpine:3.15
 COPY --from=build /usr/bin/upx /usr/bin/upx
 
 RUN set -ex \
-  && apk add --no-cache tzdata ca-certificates bash  \
+  && apk add --no-cache tzdata ca-certificates bash
 
 ENTRYPOINT ["/bin/bash"]
