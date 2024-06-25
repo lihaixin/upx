@@ -15,7 +15,7 @@ RUN apk add build-base bash make curl git perl ucl-dev zlib-dev \
   && mv ./src/upx.out /usr/bin/upx 
   
   
-FROM --platform=${TARGETPLATFORM} alpine:3.15
+FROM --platform=${TARGETPLATFORM} alpine:3.16
 COPY --from=build /usr/bin/upx /usr/bin/upx
 
 RUN set -ex \
